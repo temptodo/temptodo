@@ -15,9 +15,10 @@
   "type": "module",
   "scripts": {},
   "devDependencies": {
+    "@repo/configs": "*",
+    "oxlint": "^1.81.0",
     "turbo": "^2.10.12",
-    "typescript": "^7.0.2",
-    "@repo/configs": "*"
+    "typescript": "^7.0.2"
   },
   "devEngines": {
     "packageManager": {
