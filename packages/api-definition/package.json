@@ -1,21 +1,27 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "server",
+  "name": "@repo/api-definition",
   "version": "0.0.0",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsc --watch",
+    "build": "tsc",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix"
   },
   "dependencies": {
     "@effect/platform-node": "^4.0.0-rc.112",
-    "@repo/api-definition": "*",
     "effect": "^4.0.0-rc.112"
   },
   "devDependencies": {
     "@repo/configs": "*",
-    "tsx": "^4.23.13",
+    "@types/node": "^26.4.1",
     "typescript": "^7.0.2"
   }
 }

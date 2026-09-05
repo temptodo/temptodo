@@ -5,7 +5,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./oxlint.config": "./oxlint.config.ts"
+    "./oxlint.config": "./oxlint.config.ts",
+    "./tsconfig.base.json": "./tsconfig.base.json"
   },
   "devDependencies": {
     "oxlint": "^1.81.0",
