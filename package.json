@@ -17,6 +17,7 @@
   ],
   "type": "module",
   "scripts": {
+    "dev": "turbo run dev",
     "lint": "turbo run lint lint:root",
     "lint:fix": "turbo run lint:fix lint:fix:root",
     "lint:root": "oxlint",

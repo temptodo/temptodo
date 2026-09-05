@@ -8,6 +8,10 @@
     "lint:fix": {
       "dependsOn": ["^lint:fix"]
     },
-    "//#lint:fix:root": {}
+    "//#lint:fix:root": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
   }
 }
