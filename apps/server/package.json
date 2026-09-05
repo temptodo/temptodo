@@ -3,11 +3,14 @@
   "name": "server",
   "version": "0.0.0",
   "type": "module",
-  "scripts": {},
-  "devDependencies": {
-    "typescript": "^7.0.2"
+  "scripts": {
+    "dev": "tsx src/index.ts"
   },
   "dependencies": {
     "effect": "^4.0.0-rc.112"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
   }
 }
