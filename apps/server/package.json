@@ -9,6 +9,7 @@
     "lint:fix": "oxlint --fix"
   },
   "dependencies": {
+    "@effect/platform-node": "^4.0.0-rc.112",
     "effect": "^4.0.0-rc.112"
   },
   "devDependencies": {
