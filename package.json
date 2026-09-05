@@ -11,9 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/temptodo/temptodo.git"
   },
-  "license": "ISC",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "type": "module",
   "scripts": {},
+  "dependencies": {
+    "oxfmt": "^0.66.0"
+  },
   "devDependencies": {
     "@repo/configs": "*",
     "oxlint": "^1.81.0",
@@ -25,9 +31,5 @@
       "name": "npm",
       "version": "11.9.0"
     }
-  },
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  }
 }
