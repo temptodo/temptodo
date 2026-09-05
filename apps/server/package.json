@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "server",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {}
+}
