@@ -1,9 +1,10 @@
+import { createServer } from 'node:http';
+
 import { NodeHttpServer, NodeRuntime } from '@effect/platform-node';
+import { Api } from '@repo/api-definition';
 import { Effect, Layer } from 'effect';
 import { HttpRouter } from 'effect/unstable/http';
 import { HttpApiBuilder } from 'effect/unstable/httpapi';
-import { createServer } from 'node:http';
-import { Api } from '@repo/api-definition';
 
 const GroupLayer = HttpApiBuilder.group(Api, 'Greetings', (handlers) =>
   handlers.handle('hello', () => Effect.succeed('Hello, World!')),

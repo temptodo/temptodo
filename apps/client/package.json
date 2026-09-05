@@ -1,9 +1,13 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "@repo/client",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
     "build": "next build",
     "start": "next start"
   },
