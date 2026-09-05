@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "temptodo",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "https://github.com/temptodo/temptodo#readme",
+  "bugs": {
+    "url": "https://github.com/temptodo/temptodo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/temptodo/temptodo.git"
+  },
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+  }
+}
