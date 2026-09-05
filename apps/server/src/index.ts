@@ -12,7 +12,7 @@ const GroupLayer = HttpApiBuilder.group(Api, 'Greetings', (handlers) =>
 const ApiLayer = HttpApiBuilder.layer(Api).pipe(
   Layer.provide(GroupLayer),
   HttpRouter.serve,
-  Layer.provide(NodeHttpServer.layer(createServer, { port: 3000 })),
+  Layer.provide(NodeHttpServer.layer(createServer, { port: 8000 })),
 );
 
 Layer.launch(ApiLayer).pipe(NodeRuntime.runMain);
