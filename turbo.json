@@ -1,4 +1,13 @@
 {
   "$schema": "https://turborepo.dev/schema.json",
-  "tasks": {}
+  "tasks": {
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "//#lint:root": {},
+    "lint:fix": {
+      "dependsOn": ["^lint:fix"]
+    },
+    "//#lint:fix:root": {}
+  }
 }

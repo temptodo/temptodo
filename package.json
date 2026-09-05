@@ -16,7 +16,14 @@
     "packages/*"
   ],
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "lint": "turbo run lint lint:root",
+    "lint:fix": "turbo run lint:fix lint:fix:root",
+    "lint:root": "oxlint",
+    "lint:fix:root": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
+  },
   "dependencies": {
     "oxfmt": "^0.66.0"
   },
