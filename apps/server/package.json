@@ -6,5 +6,8 @@
   "scripts": {},
   "devDependencies": {
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "effect": "^4.0.0-rc.112"
   }
 }
