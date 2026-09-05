@@ -16,5 +16,15 @@
   "scripts": {},
   "devDependencies": {
     "turbo": "^2.10.12"
-  }
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": "11.9.0"
+    }
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
