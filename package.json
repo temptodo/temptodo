@@ -26,13 +26,11 @@
     "fmt:check": "oxfmt --check",
     "prepare": "husky"
   },
-  "dependencies": {
-    "oxfmt": "^0.66.0"
-  },
   "devDependencies": {
     "@repo/configs": "*",
     "husky": "^9.1.7",
     "lint-staged": "^17.5.0",
+    "oxfmt": "^0.66.0",
     "oxlint": "^1.81.0",
     "turbo": "^2.10.12",
     "typescript": "^7.0.2"
