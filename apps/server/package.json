@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@repo/configs": "*",
+    "@types/pg": "^8.23.1",
     "oxlint": "^1.81.0",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2"

@@ -37,5 +37,8 @@ export default defineConfig({
     'func-names': 'off',
     'import/exports-last': 'off',
     'import/group-exports': 'off',
+    'import/no-namespace': 'off',
+    'unicorn/prefer-set-has': 'off',
+    'no-magic-numbers': 'off',
   },
 });

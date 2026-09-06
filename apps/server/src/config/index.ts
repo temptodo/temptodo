@@ -1,7 +1,7 @@
-import { Config, Context, Layer, Schema } from 'effect';
+import { Config, Context, Layer } from 'effect';
 
 const DatabaseConfig = Config.all({
-  url: Config.schema(Schema.Redacted(Schema.URL), 'URL'),
+  url: Config.redacted('URL'),
 }).pipe(Config.nested('DATABASE'));
 
 const appConfig = Config.all({
