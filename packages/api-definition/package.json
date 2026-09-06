@@ -13,7 +13,8 @@
     "dev": "tsc --watch",
     "build": "tsc",
     "lint": "oxlint",
-    "lint:fix": "oxlint --fix"
+    "lint:fix": "oxlint --fix",
+    "typecheck": "tsc --noEmit -p tsconfig.lint.json"
   },
   "dependencies": {
     "@effect/platform-node": "^4.0.0-rc.112",

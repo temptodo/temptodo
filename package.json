@@ -24,6 +24,8 @@
     "lint:fix:root": "oxlint --fix",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
+    "typecheck": "turbo run typecheck typecheck:root",
+    "typecheck:root": "tsc --noEmit",
     "prepare": "husky"
   },
   "devDependencies": {
