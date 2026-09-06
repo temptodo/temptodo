@@ -8,9 +8,13 @@
     "./oxlint.config": "./oxlint.config.ts",
     "./tsconfig.base.json": "./tsconfig.base.json"
   },
+  "scripts": {
+    "prepare": "effect-tsgo patch --typescript --oxlint"
+  },
   "devDependencies": {
-    "@effect/tsgo": "^0.41.0",
-    "oxlint": "^1.81.0",
+    "@effect/tsgo": "0.41.0",
+    "oxlint": "1.81.0",
+    "oxlint-tsgolint": "7.0.2001",
     "typescript": "^7.0.2"
   }
 }
