@@ -33,5 +33,6 @@ export default defineConfig({
     'import/no-nodejs-modules': 'off',
     'func-style': 'off',
     'oxc/no-async-await': 'off',
+    'capitalized-comments': 'off',
   },
 });
