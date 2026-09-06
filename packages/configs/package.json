@@ -9,6 +9,7 @@
     "./tsconfig.base.json": "./tsconfig.base.json"
   },
   "devDependencies": {
+    "@effect/tsgo": "^0.41.0",
     "oxlint": "^1.81.0",
     "typescript": "^7.0.2"
   }
