@@ -34,5 +34,8 @@ export default defineConfig({
     'func-style': 'off',
     'oxc/no-async-await': 'off',
     'capitalized-comments': 'off',
+    'func-names': 'off',
+    'import/exports-last': 'off',
+    'import/group-exports': 'off',
   },
 });
