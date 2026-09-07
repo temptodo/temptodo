@@ -17,7 +17,7 @@ const GroupLayer = HttpApiBuilder.group(Api, 'Greetings', (handlers) =>
       const result = yield* db.execute<{ id: string }>(
         sql`SELECT 'Hello, World!' as id`,
       );
-      // oxlint-disable-next-line oxc/no-optional-chaining
+
       return result[0]?.id ?? 'fail';
     }).pipe(
       Effect.catchTag('EffectDrizzleQueryError', () =>
