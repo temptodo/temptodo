@@ -27,7 +27,7 @@
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
     "oxlint": "1.81.0",
-    "tailwindcss": "^4",
+    "tailwindcss": "4.3.3",
     "typescript": "7.0.2"
   },
   "postinstall": "next telemetry disable"
