@@ -2,7 +2,8 @@ name: ci
 
 on:
   pull_request:
-    branches: [ $default-branch ]
+    branches:
+      - main
 
 jobs:
   build:
