@@ -17,8 +17,8 @@
     "typecheck": "tsc --noEmit -p tsconfig.lint.json"
   },
   "dependencies": {
-    "@effect/platform-node": "^4.0.0-rc.112",
-    "effect": "^4.0.0-rc.112"
+    "@effect/platform-node": "4.0.0-rc.112",
+    "effect": "4.0.0-rc.112"
   },
   "devDependencies": {
     "@repo/configs": "*",
