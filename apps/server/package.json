@@ -14,11 +14,11 @@
     "typecheck": "tsc --noEmit -p tsconfig.lint.json"
   },
   "dependencies": {
-    "@effect/platform-node": "^4.0.0-rc.112",
-    "@effect/sql-pg": "^4.0.0-rc.112",
+    "@effect/platform-node": "4.0.0-rc.112",
+    "@effect/sql-pg": "4.0.0-rc.112",
     "@repo/api-definition": "*",
     "drizzle-orm": "^1.0.0-rc.4",
-    "effect": "^4.0.0-rc.112",
+    "effect": "4.0.0-rc.112",
     "pg": "^8.23.0"
   },
   "devDependencies": {
