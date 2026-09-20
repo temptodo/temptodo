@@ -26,7 +26,8 @@
     "fmt:check": "oxfmt --check",
     "typecheck": "turbo run typecheck typecheck:root",
     "typecheck:root": "tsc --noEmit",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build": "turbo run build"
   },
   "devDependencies": {
     "@repo/configs": "*",
