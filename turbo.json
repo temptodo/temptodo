@@ -20,6 +20,13 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
+    },
+    "db:generate": {
+      "cache": false,
+      "outputs": ["./drizzle/**"]
+    },
+    "db:migrate": {
+      "cache": false
     }
   }
 }
