@@ -27,7 +27,9 @@
     "typecheck": "turbo run typecheck typecheck:root",
     "typecheck:root": "tsc --noEmit",
     "prepare": "husky",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "db:generate": "turbo run db:generate --filter=server",
+    "db:migrate": "turbo run db:migrate --filter=server"
   },
   "devDependencies": {
     "@repo/configs": "*",
