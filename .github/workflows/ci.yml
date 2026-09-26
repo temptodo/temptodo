@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-lint:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-26.04
 
     strategy:
       matrix:
@@ -35,7 +35,7 @@ jobs:
 
   test-migrations:
     needs: build-and-lint
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
 
     services:
       postgres:
