@@ -3,4 +3,5 @@ import { defineConfig } from 'oxlint';
 
 export default defineConfig({
   extends: [defaultConfig],
+  env: { node: true },
 });

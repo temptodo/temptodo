@@ -1,6 +1,7 @@
 import { defineConfig } from 'oxlint';
 
 export default defineConfig({
+  env: { builtin: true },
   categories: {
     correctness: 'error',
     nursery: 'error',
