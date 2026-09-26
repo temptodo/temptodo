@@ -42,5 +42,6 @@ export default defineConfig({
     'no-magic-numbers': 'off',
     'oxc/no-optional-chaining': 'off',
     'no-ternary': 'off',
+    'node/no-sync': 'off',
   },
 });
