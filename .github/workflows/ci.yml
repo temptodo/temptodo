@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-lint:
     runs-on: ubuntu-slim
 
     strategy:
@@ -44,3 +44,51 @@ jobs:
 
       - name: Check format
         run: npm run fmt:check
+
+  test-migrations:
+    runs-on: ubuntu-slim
+
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: temptodo
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d temptodo"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    strategy:
+      matrix:
+        node-version: [24.20.0]
+        npm-version: [12.0.2]
+
+    steps:
+      - name: Checkout Source code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          package-manager-cache: false
+
+      - name: Install npm@${{ matrix.npm-version }}
+        run: npm i -g npm@${{ matrix.npm-version }}
+
+      - name: Extract cached dependencies
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: Install
+        run: npm ci
+
+      - name: Run migrations
+        run: npm db:migrate
