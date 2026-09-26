@@ -43,5 +43,6 @@ export default defineConfig({
     'oxc/no-optional-chaining': 'off',
     'no-ternary': 'off',
     'node/no-sync': 'off',
+    'init-declarations': 'off',
   },
 });
