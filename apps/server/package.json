@@ -13,7 +13,8 @@
     "lint:fix": "oxlint --fix",
     "typecheck": "tsc --noEmit -p tsconfig.lint.json",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@effect/platform-node": "4.0.0-rc.112",

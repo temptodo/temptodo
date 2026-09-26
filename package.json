@@ -17,7 +17,7 @@
   ],
   "type": "module",
   "scripts": {
-    "dev": "turbo run dev",
+    "dev": "turbo run dev db:studio",
     "lint": "turbo run lint lint:root",
     "lint:fix": "turbo run lint:fix lint:fix:root",
     "lint:root": "oxlint",
