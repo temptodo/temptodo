@@ -18,23 +18,11 @@ jobs:
       - name: Checkout Source code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
         with:
           node-version: ${{ matrix.node-version }}
-          package-manager-cache: false
-
-      - name: Install npm@${{ matrix.npm-version }}
-        run: npm i -g npm@${{ matrix.npm-version }}
-
-      - name: Extract cached dependencies
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          cache: npm
-          cache-dependency-path: '**/package-lock.json'
-
-      - name: Install
-        run: npm ci
+          npm-version: ${{ matrix.npm-version }}
 
       - name: Build
         run: npm run build
@@ -46,11 +34,12 @@ jobs:
         run: npm run fmt:check
 
   test-migrations:
-    runs-on: ubuntu-slim
+    needs: build-and-lint
+    runs-on: ubuntu-latest
 
     services:
       postgres:
-        image: postgres:18
+        image: postgres:18.6-alpine
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
@@ -72,23 +61,13 @@ jobs:
       - name: Checkout Source code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - name: Setup Node
+        uses: ./.github/actions/setup-node
         with:
           node-version: ${{ matrix.node-version }}
-          package-manager-cache: false
-
-      - name: Install npm@${{ matrix.npm-version }}
-        run: npm i -g npm@${{ matrix.npm-version }}
-
-      - name: Extract cached dependencies
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          cache: npm
-          cache-dependency-path: '**/package-lock.json'
-
-      - name: Install
-        run: npm ci
+          npm-version: ${{ matrix.npm-version }}
 
       - name: Run migrations
-        run: npm db:migrate
+        run: npm run db:migrate
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/temptodo
