@@ -3,9 +3,7 @@
   "extends": "@repo/configs/tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./dist",
-
-    "types": ["node"]
+    "outDir": "./dist"
   },
   "include": ["src/**/*.ts"]
 }
