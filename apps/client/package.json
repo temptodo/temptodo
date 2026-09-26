@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@repo/api-definition": "*",
+    "@tanstack/react-query": "5.104.0",
     "effect": "4.0.0-rc.112",
     "next": "16.3.5",
     "react": "19.2.8",
