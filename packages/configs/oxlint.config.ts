@@ -45,5 +45,10 @@ export default defineConfig({
     'no-ternary': 'off',
     'node/no-sync': 'off',
     'init-declarations': 'off',
+    'id-length': 'off',
+    'import/consistent-type-specifier-style': 'off',
+    'max-params': 'off',
+    'typescript/explicit-module-boundary-types': 'off',
+    'oxc/no-rest-spread-properties': 'off',
   },
 });
