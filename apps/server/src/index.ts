@@ -29,6 +29,12 @@ const GroupLayer = HttpApiBuilder.group(Api, 'Greetings', (handlers) =>
 
 const ApiLayer = HttpApiBuilder.layer(Api).pipe(
   Layer.provide(GroupLayer),
+  Layer.provide(
+    HttpRouter.cors({
+      allowedOrigins: ['http://127.0.0.1:3000'],
+      credentials: true,
+    }),
+  ),
   HttpRouter.serve,
   Layer.provide(Layer.provideMerge(DbLive, PgClientLive)),
   Layer.provide(AppConfigLive),
