@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.lint.json"
   },
   "dependencies": {
-    "effect": "4.0.0-rc.112"
+    "effect": "4.0.0-rc.117"
   },
   "devDependencies": {
     "@repo/configs": "*",

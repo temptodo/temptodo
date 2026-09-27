@@ -21,5 +21,5 @@ export default function Home(): ReactNode {
     );
   }
 
-  return <p>{data}</p>;
+  return <p>{data?.value}</p>;
 }
