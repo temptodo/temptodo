@@ -50,5 +50,6 @@ export default defineConfig({
     'max-params': 'off',
     'typescript/explicit-module-boundary-types': 'off',
     'oxc/no-rest-spread-properties': 'off',
+    'unicorn/max-nested-calls': 'off',
   },
 });
