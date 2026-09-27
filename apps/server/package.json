@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@repo/configs": "*",
+    "@types/node": "22.6.1",
     "@types/pg": "8.23.1",
     "drizzle-kit": "1.0.0-rc.4",
     "oxlint": "1.81.0",
