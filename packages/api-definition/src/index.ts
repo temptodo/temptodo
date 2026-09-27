@@ -8,7 +8,7 @@ import {
 export const Api = HttpApi.make('MyApi').add(
   HttpApiGroup.make('Greetings').add(
     HttpApiEndpoint.get('hello', '/', {
-      success: Schema.String,
+      success: Schema.Struct({ value: Schema.String }),
     }),
   ),
 );

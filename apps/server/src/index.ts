@@ -18,10 +18,10 @@ const GroupLayer = HttpApiBuilder.group(Api, 'Greetings', (handlers) =>
         sql`SELECT 'Hello, World!' as id`,
       );
 
-      return result[0]?.id ?? 'fail';
+      return { value: result[0]?.id ?? 'fail' };
     }).pipe(
       Effect.catchTag('EffectDrizzleQueryError', () =>
-        Effect.succeed('fail :('),
+        Effect.succeed({ value: 'fail :(' }),
       ),
     ),
   ),

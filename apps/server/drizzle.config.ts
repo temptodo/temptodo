@@ -2,7 +2,7 @@ import { defineConfig } from 'drizzle-kit';
 import { Config, Effect, Redacted } from 'effect';
 
 const DatabaseConfig = Config.all({
-  url: Config.redacted('URL'),
+  url: Config.Redacted('URL'),
 }).pipe(Config.nested('DATABASE'));
 
 const { url } = Effect.runSync(Config.unwrap(DatabaseConfig));
