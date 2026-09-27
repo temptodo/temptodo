@@ -1,19 +1,25 @@
-import { Api } from '@repo/api-definition';
-import { Effect } from 'effect';
-import { FetchHttpClient } from 'effect/unstable/http';
-import { HttpApiClient } from 'effect/unstable/httpapi';
+'use client';
+import { Match } from 'effect';
+import type { ReactNode } from 'react';
 
-const test = Effect.gen(function* test() {
-  const client = yield* HttpApiClient.make(Api, {
-    baseUrl: 'http://127.0.0.1:8000',
-  });
-  return yield* client.Greetings.hello();
-}).pipe(Effect.provide(FetchHttpClient.layer));
+import { useEffectQuery } from '@/lib/tanstack-query';
 
 export const dynamic = 'force-dynamic';
 
-export default async function Home(): Promise<React.ReactNode> {
-  const res = await Effect.runPromise(test);
+export default function Home(): ReactNode {
+  const { isLoading, data, error } = useEffectQuery('Greetings', 'hello', {});
 
-  return <div>Hello, World! | {res}</div>;
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return Match.value(error).pipe(
+      Match.tag('HttpClientError', (e) => <p>{JSON.stringify(e)}</p>),
+      Match.tag('SchemaError', (e) => <p>{JSON.stringify(e)}</p>),
+      Match.exhaustive,
+    );
+  }
+
+  return <p>{data}</p>;
 }
